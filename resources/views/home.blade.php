@@ -53,7 +53,7 @@
             <div class="left-nav">
                 <!-- start logo -->
                 <div class="sidebar-part1">
-                    <a href="" title="Ashid Soft LLC" class="logo"><img src="images/logo-ashid-soft.png" data-rjs="images/logo-ashid-soft@2x.png" alt="Ashid Soft LLC"></a> 
+                    <a href="/" title="Ashid Soft LLC" class="logo"><img src="images/logo-ashid-soft.png" data-rjs="images/logo-ashid-soft@2x.png" alt="Ashid Soft LLC"></a> 
                 </div>
                 <!-- end logo -->
                 <div class="sidebar-part2">  
