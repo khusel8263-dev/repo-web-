@@ -380,7 +380,7 @@
                 </div>
                 <div class="sidebar-part3">
                     <div class="bottom-menu-icon">
-                        <a href="#contact" class="text-extra-dark-gray nav-icon" >
+                        <a href="/#contact" class="text-extra-dark-gray nav-icon" >
                             <!-- <span></span>
                             <span></span>
                             <span></span>
