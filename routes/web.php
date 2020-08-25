@@ -18,5 +18,9 @@ Route::get('#contact', function () {
     return view('success');
 });
 
+Route::get('/test', function () {
+    return view('welcome');
+});
+
 Route::get('/contact', 'SendEmailController@index');
 Route::post('/contact', 'SendEmailController@send');
