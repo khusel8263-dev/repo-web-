@@ -5,7 +5,7 @@
         :is-full-page="fullPage">
         </loading>
 
-    <form @submit.prevent="submit">        
+    <form @submit.prevent="submit" id="contact-form">        
         <div v-if="success" class="alert alert-success mt-3">
             Таны захиа амжилттай илгээгдлээ!
         </div>
@@ -26,19 +26,20 @@
                 size="invisible"
                 sitekey="6Lf3B8YZAAAAADWDBMFWmcNcGoMCzVdamaUJyajb" >          
         </vue-recaptcha>
-        <button id="contact-us-button" type="submit" class="btn btn-small border-radius-4 btn-black">Илгээх</button>
+        <button type="submit" class="btn btn-small border-radius-4 btn-black">Илгээх</button>
     </form>
     </div>
 </template>
 
-<script>
-    // Import component
-    import Loading from 'vue-loading-overlay';
+<script>    
+    // Import component    
     // Import stylesheet
+    import Loading from 'vue-loading-overlay';
     import 'vue-loading-overlay/dist/vue-loading.css';
-    import VueRecaptcha from 'vue-recaptcha';
+    import VueRecaptcha from 'vue-recaptcha';    
 
     export default {
+        name: "ContactFrom",
         data() {
             return {
                 isLoading: false,

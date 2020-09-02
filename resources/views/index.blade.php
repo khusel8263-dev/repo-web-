@@ -49,8 +49,7 @@
         <!--[if IE]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->        
-        <script src="https://www.google.com/recaptcha/api.js?hl=mn&onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
-        
+        <script src="https://www.google.com/recaptcha/api.js?hl=mn&onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>        
     </head>
 
     <body class="left-nav-sidebar">
@@ -436,13 +435,16 @@
         <!-- start scroll to top -->
         <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
         <!-- end scroll to top -->
+        <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
         <!-- javascript libraries -->   
-        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>        
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->        
         <script type="text/javascript" src="js/modernizr.js"></script>
         <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
         <script type="text/javascript" src="js/skrollr.min.js"></script>
         <script type="text/javascript" src="js/smooth-scroll.js"></script>
+        <!-- <script src="https://rawgit.com/kswedberg/jquery-smooth-scroll/master/jquery.smooth-scroll.js"></script> -->
         <script type="text/javascript" src="js/jquery.appear.js"></script>
         <!-- menu navigation -->
         <script type="text/javascript" src="js/bootsnav.js"></script>
@@ -480,7 +482,7 @@
         <!-- instagram -->
         <script type="text/javascript" src="js/instafeed.min.js"></script>
         <!-- retina -->
-        <script type="text/javascript" src="js/retina.min.js"></script>
+        <script type="text/javascript" src="js/retina.min.js"></script>        
         <!-- revolution -->
         <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
         <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
@@ -494,9 +496,8 @@
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <!-- setting -->
+        <!-- setting -->                        
         <script type="text/javascript" src="js/main.js"></script>        
-        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
     
