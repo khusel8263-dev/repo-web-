@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="{{asset('css/swiper.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/justified-gallery.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/settings.css')}}" media="screen" />
-    <link rel="stylesheet" href="{{asset('css/layers.css')}}"/>
-    <link rel="stylesheet" href="{{asset('css/navigation.css')}}"/>
-    <link rel="stylesheet" href="{{asset('css/bootsnav.css')}}"/>
+    <!-- <link rel="stylesheet" href="{{ asset('revolution/css/settings.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ asset('revolution/css/layers.css') }}">
+    <link rel="stylesheet" href="{{ asset('revolution/css/navigation.css') }}"> -->
+ <!-- <link rel="stylesheet" href="{{asset('css/bootsnav.css')}}"/>  -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}" />
     <script src="https://kit.fontawesome.com/70cd87d56f.js" crossorigin="anonymous"></script>
@@ -33,23 +33,43 @@
 
 <body>
     <header>
-        <nav
-            class="navbar navbar-default bootsnav background-white header-light-transparent navbar-banner navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg background-white header-light-transparent navbar-banner">
             <div class="container-fluid nav-header-container">
                 <div class="brand-logo"><a href="#home" title="Ashid Soft LLC" class="logo"><img
                             src="images/image copy.png" alt="Ashid Soft LLC"></a></div>
-                <button type="button" class="navbar-toggler" aria-label="toggle navigation"
-                    data-target="#navbar-collapse-toggle-1"><span></span><span></span><span></span></button>
-                <div class="navbar-collapse" id="navbar-collapse-toggle-1">
-                    <ul id="accordion" class="nav navbar-nav alt-font text-normal">
-                        <li><a href="#home" class="inner-link">эхлэл</a></li>
-                        <li><a href="#about" class="inner-link">тухай</a></li>
-                        <li><a href="#services" class="inner-link">үйлчилгээ</a></li>
-                        <li><a href="#web-developement" class="inner-link">веб хөгжүүлэлт </a></li>
-                        <li><a href="#contact" class="inner-link">холбогдох</a></li>
-                    </ul>
-                </div>
-                <div class="header-actions">
+           <button
+    type="button"
+    class="navbar-toggler"
+    data-toggle="collapse"
+    data-target="#navbar-collapse-toggle-1"
+    aria-controls="navbar-collapse-toggle-1"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+>
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbar-collapse-toggle-1">
+    <ul id="accordion" class="navbar-nav alt-font text-normal mx-auto">
+        <li class="nav-item">
+            <a href="#home" class="nav-link inner-link">эхлэл</a>
+        </li>
+        <li class="nav-item">
+            <a href="#about" class="nav-link inner-link">тухай</a>
+        </li>
+        <li class="nav-item">
+            <a href="#services" class="nav-link inner-link">үйлчилгээ</a>
+        </li>
+        <li class="nav-item">
+            <a href="#web-developement" class="nav-link inner-link">веб хөгжүүлэлт</a>
+        </li>
+        <li class="nav-item">
+            <a href="#contact" class="nav-link inner-link">холбогдох</a>
+        </li>
+    </ul>
+</div>
                     <a href="#search-header" class="header-search-form">
                         <i class="fa-solid fa-magnifying-glass fa-bounce fa-xl" style="color: rgb(215, 115, 29);"></i>
                     </a>
@@ -334,35 +354,35 @@
 </footer>
 
     <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/modernizr.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/skrollr.min.js"></script>
-    <script type="text/javascript" src="js/smooth-scroll.js"></script>
-    <script type="text/javascript" src="js/jquery.appear.js"></script>
-    <script type="text/javascript" src="js/bootsnav.js"></script>
-    <script type="text/javascript" src="js/jquery.nav.js"></script>
-    <script type="text/javascript" src="js/wow.min.js"></script>
-    <script type="text/javascript" src="js/page-scroll.js"></script>
-    <script type="text/javascript" src="js/swiper.min.js"></script>
-    <script type="text/javascript" src="js/jquery.count-to.js"></script>
-    <script type="text/javascript" src="js/jquery.stellar.js"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/classie.js"></script>
-    <script type="text/javascript" src="js/hamburger-menu.js"></script>
-    <script type="text/javascript" src="js/counter.js"></script>
-    <script type="text/javascript" src="js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="js/skill.bars.jquery.js"></script>
-    <script type="text/javascript" src="js/justified-gallery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
-    <script type="text/javascript" src="js/instafeed.min.js"></script>
-    <script type="text/javascript" src="js/retina.min.js"></script>
-    <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script  src="{{asset('js/modernizr.js')}}"></script>
+   <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+    <script  src="{{asset('js/jquery.easing.1.3.js')}}"></script>
+    <script  src="{{asset('js/skrollr.min.js')}}"></script>
+    <script  src="{{asset('js/smooth-scroll.js')}}"></script>
+    <script  src="{{asset('js/jquery.appear.js')}}"></script>
+    <script src="{{asset('js/bootsnav.js')}}"></script>
+    <script  src="{{asset('js/jquery.nav.js')}}"></script>
+    <script src="{{asset('js/wow.min.js')}}"></script>
+    <script src="{{asset('js/page-scroll.js')}}"></script>
+    <script  src="{{asset('js/swiper.min.js')}}"></script>
+    <script src="{{asset('js/jquery.count-to.js')}}"></script>
+    <script  src="{{asset('js/jquery.stellar.js')}}"></script>
+    <script  src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+    <script  src="{{asset('js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('js/imagesloaded.pkgd.min.js')}}"></script>
+    <script  src="{{asset('js/classie.js')}}"></script>
+    <script  src="{{asset('js/hamburger-menu.js')}}"></script>
+    <script  src="{{asset('js/counter.js')}}"></script>
+    <script  src="{{asset('js/jquery.fitvids.js')}}"></script>
+    <script  src="{{asset('js/skill.bars.jquery.js')}}"></script>
+    <script  src="{{asset('js/justified-gallery.min.js')}}"></script>
+    <script  src="{{asset('js/jquery.easypiechart.min.js')}}"></script>
+    <script  src="{{asset('js/instafeed.min.js')}}"></script>
+    <script src="{{asset('js/retina.min.js')}}"></script>
+    <!-- <script src="{{ asset('revolution/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script src="{{ asset('revolution/js/jquery.themepunch.revolution.min.js') }}"></script> -->
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>
