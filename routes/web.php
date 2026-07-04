@@ -24,7 +24,10 @@ Route::get('#contact', function () {
 Route::get('/test', function () {
     return view('welcome');
 });
-
+Route::get('/login', function () {
+    return view('auth.login');
+});
+Route::get('/dashboard', 'AdminController@index')->middleware('auth')->name('admin.dashboard');
 Route::get('/checkforupdates/ashiddental', function (Request $request) {
     // Check if the request contains the custom header or parameter required for authentication
     // Replace 'YOUR_CUSTOM_HEADER' with the actual header name or 'YOUR_PARAM_NAME' with the actual parameter name used by your Windows application.
@@ -66,8 +69,8 @@ Route::post('/contact', 'SendEmailController@send');
 
 Auth::routes();
 
-Route::prefix('admin')->group(function () {
-    Route::get('/', 'AdminController@index');
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/users', 'UserController@GetList')->name('admin-users-list');
     Route::get('/users/edit/{id}', 'UserController@GetUser');
     Route::put('/users/update/{id}', 'UserController@Update')->name('admin-users-update');
