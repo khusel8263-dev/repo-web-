@@ -37,8 +37,7 @@
 
   @yield('content')  
   
-  <!-- Footer -->
-  @include('admin.footer')
+
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

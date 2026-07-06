@@ -79,7 +79,7 @@
         <a href="#search-header" class="header-search-form">
             <i class="fa-solid fa-magnifying-glass fa-bounce fa-xl" style="color: rgb(215, 115, 29);"></i>
         </a>
-        <a href="https://www.facebook.com/ashidsoft" target="_blank">
+        <a href="https://www.facebook.com/ashidsoft" target="_blank">   
             <i class="fa-brands fa-facebook fa-bounce fa-xl" style="color: rgb(215, 115, 29);"></i>
         </a>
         <a href="https://instagram.com/ashidsoft" target="_blank">
@@ -433,7 +433,7 @@
         <script src="{{asset('js/retina.min.js')}}"></script>
         <!-- <script src="{{ asset('revolution/js/jquery.themepunch.tools.min.js') }}"></script>
         <script src="{{ asset('revolution/js/jquery.themepunch.revolution.min.js') }}"></script> -->
-        <script src="{{ asset('js/main.js') }}"></script>
+        <!-- <script src="{{ asset('js/main.js') }}"></script> -->
     </body>
 
     </html>
