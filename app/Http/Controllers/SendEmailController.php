@@ -10,7 +10,7 @@ class SendEmailController extends Controller
 {
     function index()
     {
-        return view('home');
+        return view('contact');
     }
 
     function send(Request $request)
@@ -18,7 +18,7 @@ class SendEmailController extends Controller
         $this->validate($request, [
             'name'     =>  'required',
             'email'  =>  'required|email',
-            'message' =>  'required',            
+            'message' =>  'required',                
         ]);
 
         $data = array(
@@ -27,10 +27,10 @@ class SendEmailController extends Controller
             'message'   =>   $request->message
         );
 
-        Mail::to('info@ashidsoft.mn')->send(new SendMail($data));
+        Mail::to('ashidsoft@gmail.com')->send(new SendMail($data));
         // return back()->with('success', 'Thanks for contacting us!');
         // return view('home')->with('success', 'Thanks for contacting us!');
         
-        return ['Таны захиа амжилттай илгээгдлээ.'];
+        return redirect('/#contact')->with('success', 'Таны захиа амжилттай илгээгдлээ.');
     }
 }

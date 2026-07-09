@@ -1312,3 +1312,11 @@ section {
 #show-clients:checked ~ .hidden-clients-wrapper{
     display: grid;
 }
+.success-message{
+    margin: top 400px;
+    padding:12px 18px;
+    background:#1f3d2d;
+    color:#7CFC98;
+    border-left:4px solid #ff8c1a;
+    border-radius:8px;
+}

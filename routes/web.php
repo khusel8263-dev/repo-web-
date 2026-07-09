@@ -13,7 +13,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
-
+use app\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('index');
 });
@@ -57,16 +57,19 @@ Route::get('/dashboard', 'AdminController@index')->middleware('auth')->name('adm
 //     if (file_exists($filePath) && is_file($filePath)) {
 //         // Return the file as a download response
 //         return response()->download($filePath);
-//     } else {
+ //     } else {
 //         // If the file does not exist, return a 404 response or any other response you prefer
 //         abort(404);
 //     }
 // });
 
-// Route::get('/contact', 'SendEmailController@index');
-// Route::post('/contact', 'SendEmailController@send');
+Route::get('/contact', 'SendEmailController@index');
+Route::post('/contact', 'SendEmailController@send');
 
 Auth::routes();
+
+// Route::post('/contact', 'ContactController@store')
+//         ->name('contact.store');
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');

@@ -374,15 +374,10 @@
                     <h4>Бидэнтэй холбогдох</h4>
                     <p>Таны имэйл болон зурвасыг бид хүлээн авна.</p>
 
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <input 
-                            type="email" 
-                            name="email" 
-                            placeholder="Таны имэйл хаяг" 
-                            autocomplete="off" 
-                            required
-                        >
-
+                   <form method="post" action="{{ url('/contact') }}"  >
+                     {{ csrf_field() }}                       
+                      <input type="email" name="email" placeholder="имэйл хаяг" autocomplete="off" required>
+                        <input type="text" name="name" placeholder="нэр" autocomplete="off" required>
                         <textarea 
                             name="message" 
                             rows="5" 
@@ -390,9 +385,16 @@
                             autocomplete="off" 
                             required
                         ></textarea>
+                    
 
-                        <button type="submit">илгээх</button>
+                        <button type="submit" >илгээх</button>
                     </form>
+                    @if(session('success'))
+    <div class="success-message">
+        {{ session('success') }}
+    </div>
+          @endif
+
                 </div>
 
             </div>
